@@ -1,10 +1,19 @@
-# include <iostream>
-# include <string>
-double main(){
+#include <iostream>
+#include <string>
+#include <catch.hpp>
+#define CATCH_CONFIG_RUNNER
+double x=1;
+double y=1;
+double mileToKilometer(double x){
+y=x*1.60934;
+return y;
+}
+
+int main(int argc, char* argv[]){
 std :: cout << "Meilen eingeben:"
 << std :: endl ;
-double x
 std :: cin >> x ;
-x=x*1.60934;
-std :: cout << "Kilometer:" << x;
+mileToKilometer(x);
+std :: cout << "Kilometer:" << y << std :: endl ;
 }
+
